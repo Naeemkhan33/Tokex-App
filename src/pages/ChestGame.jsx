@@ -136,7 +136,11 @@ const ChestGame = () => {
               <div className='text-capitalize text-center pl-4'>
                 <h5
                   className='mb-0 font-weight-bold mb-n1'
-                  onClick={() => setShowItemOne(!showItemOne)}
+                  onClick={() => {
+                    setShowItemOne(true);
+                    setShowItemTwo(false);
+                    setShowItemThree(false);
+                  }}
                 >
                   Silver Chest
                 </h5>
@@ -145,7 +149,11 @@ const ChestGame = () => {
               <div className='text-capitalize text-center mx-auto'>
                 <h5
                   className='mb-0 font-weight-bold mb-n1'
-                  onClick={() => setShowItemTwo(!showItemTwo)}
+                  onClick={() => {
+                    setShowItemOne(false);
+                    setShowItemTwo(true);
+                    setShowItemThree(false);
+                  }}
                 >
                   Gold Chest
                 </h5>
@@ -154,7 +162,11 @@ const ChestGame = () => {
               <div className='text-capitalize text-center'>
                 <h5
                   className='mb-0 font-weight-bold mb-n1'
-                  onClick={() => setShowItemThree(!showItemThree)}
+                  onClick={() => {
+                    setShowItemOne(false);
+                    setShowItemTwo(false);
+                    setShowItemThree(true);
+                  }}
                 >
                   Diamond Chest
                 </h5>
