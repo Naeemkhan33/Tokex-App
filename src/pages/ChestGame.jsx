@@ -3,6 +3,9 @@ import { AiFillStar, AiOutlineDown } from 'react-icons/ai';
 import Dropdown from 'rc-dropdown';
 import 'rc-dropdown/assets/index.css';
 
+// Styles
+import './styles/box-animation.css';
+
 // images
 import Four from '../assets/images/four-removebg-preview.png';
 import SilverChest from '../assets/images/box-1.png';
@@ -85,10 +88,10 @@ const ChestGame = () => {
                 <img
                   className={
                     showItemOne
-                      ? `text-center pt-3 box-anim`
-                      : `box-anim box-anim-hide-2`
+                      ? `text-center pt-3 box-anime-pos slide-in-blurred-right`
+                      : `slide-out-blurred-right box-anime-pos`
                   }
-                  height={60}
+                  height={80}
                   src={SilverChest}
                   alt='Silver Chest'
                 />
@@ -110,10 +113,10 @@ const ChestGame = () => {
                 <img
                   className={
                     showItemThree
-                      ? `text-center pt-3 box-anim`
-                      : `box-anim box-anim-hide-2`
+                      ? `text-center pt-3 box-anime-pos-2 slide-in-blurred-left`
+                      : `box-anime-pos-2 slide-out-blurred-left`
                   }
-                  height={60}
+                  height={80}
                   src={DiamondChest}
                   alt='Diamond Chest'
                 />
@@ -123,8 +126,8 @@ const ChestGame = () => {
             <section
               className={
                 showItemTwo
-                  ? `text-center pt-3 box-anim`
-                  : `box-anim box-anim-hide-2`
+                  ? `text-center pt-3 box-anim  fade-in-top`
+                  : `box-anim fade-in-bottom`
               }
             >
               <div>
@@ -132,10 +135,10 @@ const ChestGame = () => {
               </div>
             </section>
 
-            <section className='d-flex align-items-center my-3'>
-              <div className='text-capitalize text-center pl-4'>
+            <section className='d-flex flex-column flex-md-row align-items-center my-3'>
+              <div className='text-capitalize text-center box-btn pl-md-4 mb-3 mb-md-0'>
                 <h5
-                  className='mb-0 font-weight-bold mb-n1'
+                  className='mb-0 font-weight-bold mb-n1  box-text-1'
                   onClick={() => {
                     setShowItemOne(true);
                     setShowItemTwo(false);
@@ -146,9 +149,9 @@ const ChestGame = () => {
                 </h5>
                 <small className='text-black-50'>Play now</small>
               </div>
-              <div className='text-capitalize text-center mx-auto'>
+              <div className='text-capitalize text-center mx-auto box-btn mb-3 mb-md-0'>
                 <h5
-                  className='mb-0 font-weight-bold mb-n1'
+                  className='mb-0 font-weight-bold mb-n1 text-warning '
                   onClick={() => {
                     setShowItemOne(false);
                     setShowItemTwo(true);
@@ -159,9 +162,9 @@ const ChestGame = () => {
                 </h5>
                 <small className='text-black-50'>Play now</small>
               </div>
-              <div className='text-capitalize text-center'>
+              <div className='text-capitalize text-center box-btn'>
                 <h5
-                  className='mb-0 font-weight-bold mb-n1'
+                  className='mb-0 font-weight-bold mb-n1  box-text-3'
                   onClick={() => {
                     setShowItemOne(false);
                     setShowItemTwo(false);
