@@ -19,6 +19,12 @@ body {
   width: 100px;
 }
 
+.h5,
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 @media only screen and (max-width: 995px) {
   .main-height {
     height: unset;
@@ -62,6 +68,10 @@ body {
 
 .border-bottom-dotted {
   border-bottom-style: dotted !important;
+}
+
+.small-input {
+  width: 55px;
 }
 
 /* Custom Drop Down */
@@ -134,13 +144,14 @@ a:hover {
 }
 
 .btn-success {
-  color: #fff;
+  color: #fff !important;
   background-color: #1de693;
   border-color: #01d67d;
   box-shadow: 0 0.3rem 0.5rem 0.1rem rgb(1 214 125 / 40%);
 }
 
 .btn-success:hover {
+  color: #fff !important;
   background-color: #43d095;
   border-color: #43d095;
 }
@@ -160,9 +171,29 @@ a:hover {
 }
 
 .btn-secondary {
+  color: #fff !important;
   box-shadow: 0 0.3rem 0.5rem 0.1rem rgb(0 0 0 / 40%);
+}
+
+.btn-secondary:hover {
+  color: #fff !important;
 }
 
 .btn-secondary:focus {
   box-shadow: 0 0.3rem 0.5rem 0.1rem rgb(0 0 0 / 50%);
+}
+
+.btn-outline-success {
+  color: rgb(186, 183, 183);
+  border-color: rgb(186, 183, 183);
+}
+
+.input-group-text {
+  transition: all 0.5s ease;
+  border-radius: 0.5rem;
+}
+
+.input-group-text:focus {
+  background-color: #fff;
+  outline: 0;
 }

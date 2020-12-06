@@ -1,4 +1,5 @@
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 // images
 import LogoBig from '../assets/images/logo-2.png';
@@ -21,6 +22,8 @@ const Home = () => {
                 <Row className='pt-2 justify-content-center'>
                   <Col xs={6} md={3} lg={6}>
                     <Button
+                      as={Link}
+                      to='/chestGame'
                       className='rounded-pill py-2'
                       variant='success'
                       block
@@ -55,6 +58,8 @@ const Home = () => {
                 <Row className='pt-2'>
                   <Col lg={8}>
                     <Button
+                      as={Link}
+                      to='/referralSection'
                       className='rounded-pill py-2'
                       variant='secondary'
                       block

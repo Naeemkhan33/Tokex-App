@@ -8,14 +8,16 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ChestGame from './pages/ChestGame';
+import ReferralSection from './pages/ReferralSection';
 
 function App() {
   return (
     <div className="App vh-100 bg-light pt-5">
      <Header/>
       <Switch>
-        <Route path='/home' component={Home} />
-        <Route exact path='/' component={ChestGame}  />
+        <Route exact path='/' component={Home} />
+        <Route exact path='/chestGame' component={ChestGame}  />
+        <Route exact path='/referralSection' component={ReferralSection}  />
       </Switch>
       {/* <Footer/> */}
     </div>
