@@ -100,11 +100,10 @@ const ChestGame = () => {
                 className={
                   showItemOne
                     ? `chest-game-border-left`
-                    : `` && showItemTwo
-                    ? `chest-game-border-bottom`
-                    : `` && showItemThree
-                    ? ``
-                    : `chest-game-border-right`
+                    :  
+                    showItemTwo ?  `chest-game-border-bottom`
+                    : 
+                    showItemThree ?  `chest-game-border-right`: ``
                 }
               >
                 <img height={70} src={Four} alt='Logo' />
