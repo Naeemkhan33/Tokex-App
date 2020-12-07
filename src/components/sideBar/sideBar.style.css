@@ -1,0 +1,116 @@
+.sidebar-c {
+  position: fixed;
+  width: 70px;
+  height: 100%;
+  background: #fff;
+  z-index: 222;
+  transition: all 0.5s ease;
+  border-radius: 50rem;
+}
+
+.sidebar-c::before {
+  content: '';
+  display: none;
+  height: 10px;
+  width: 10px;
+  background-color: #00f2c3;
+  position: absolute;
+  transform: rotateZ(45deg);
+  top: -5px;
+  left: 28.5px;
+}
+
+.sidebar-c:hover {
+  width: 250px;
+  border-radius: 0.3rem;
+}
+
+.sidebar-c .overflow-sideBar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-c li {
+  width: 70px;
+  transition: all 0.5s ease;
+}
+
+.sidebar-c li div {
+  display: none;
+}
+
+@keyframes mymove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sidebar-c:hover li div {
+  display: block;
+  opacity: 1;
+  animation: mymove 3s ease;
+}
+
+.sidebar-c li:hover {
+  width: 250px;
+}
+
+.sidebar-c li a {
+  color: #1de693 !important ;
+}
+
+.sidebar-c li a:hover {
+  background-color: unset;
+
+  opacity: 0.7;
+}
+
+.w-0 > * {
+  display: none;
+}
+
+.w-0 {
+  width: 0px;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1070px) {
+  .sidebar-c {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(7, 7, 7, 0.3);
+    border-radius: unset;
+  }
+
+  .sidebar-c:hover {
+    width: 100%;
+  }
+
+  .sidebar-c .overflow-sideBar {
+    background: #fff;
+    width: 300px;
+    height: 100%;
+  }
+
+  .sidebar-c .nav {
+    width: 300px;
+  }
+
+  .sidebar-c li div {
+    display: block;
+  }
+
+  .sidebar-c li:hover {
+    width: unset;
+  }
+
+  .w-0 {
+    transition: unset;
+  }
+}

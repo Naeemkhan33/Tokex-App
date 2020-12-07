@@ -1,4 +1,6 @@
-import { Route, Switch } from 'react-router-dom';
+
+import { useState } from 'react';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import './App.css';
 
 // Pages
@@ -9,19 +11,28 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ChestGame from './pages/ChestGame';
 import ReferralSection from './pages/ReferralSection';
+import SideBar from './components/sideBar/SideBar';
+import { Col, Row } from 'react-bootstrap';
 
-function App() {
+
+function App({location}) {
+  const [show, setShow] = useState(false);
   return (
     <div className="App vh-100 bg-light pt-5">
-     <Header/>
+     <Header onClickToggle={() => setShow(!show)}/>
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Row className='mx-0'>
+        <SideBar className={show ? 'sidebar-c border shadow-sm' : 'w-0'}/>
+         <Col className='px-0'>
+         <Route exact path='/' component={Home} />
         <Route exact path='/chestGame' component={ChestGame}  />
         <Route exact path='/referralSection' component={ReferralSection}  />
+        </Col>
+        </Row>
       </Switch>
-      {/* <Footer/> */}
+      <Footer location={location}/>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

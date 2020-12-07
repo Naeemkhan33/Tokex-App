@@ -19,13 +19,29 @@ body {
   width: 100px;
 }
 
-.h5,
-h5 {
+.font-weight-bolder {
+  font-weight: 800 !important;
+}
+
+.h6,
+h6 {
   font-size: 1rem;
   font-weight: 600;
 }
 
+@media only screen and (max-width: 1150px) {
+  .h3,
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
 @media only screen and (max-width: 995px) {
+  .h3,
+  h3 {
+    font-size: 1.4rem;
+  }
+
   .main-height {
     height: unset;
   }
@@ -37,6 +53,16 @@ h5 {
 
 .letter-spacing {
   letter-spacing: 2px;
+}
+
+.small-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  color: #fff;
 }
 
 .line-box {
@@ -53,7 +79,50 @@ h5 {
   width: 25px;
   border-radius: 50px;
   display: flex;
-  margin-top: -4px;
+  margin-top: -3px;
+}
+
+.line-box-2 {
+  display: flex;
+  height: 3.5px;
+  width: 20px;
+  background: rgb(160, 155, 241);
+  background: linear-gradient(
+    90deg,
+    rgba(160, 155, 241, 1) 0%,
+    rgba(88, 88, 204, 1) 50%,
+    rgba(0, 136, 164, 1) 100%
+  );
+  border-radius: 50px;
+}
+
+.line-border {
+  position: absolute;
+  left: 9px;
+  height: 16px;
+  width: 1.5px;
+  background-color: #ddd;
+}
+
+.dot {
+  height: 11px;
+  width: 11px;
+  background-color: #676464;
+  border-radius: 50px;
+  display: flex;
+}
+
+.rounded-lg-big {
+  border-radius: 1.25rem !important;
+}
+
+.rounded-lg-very-big {
+  border-radius: 5.25rem !important;
+}
+
+.rounded-left-very-big {
+  border-top-left-radius: 5.25rem !important;
+  border-bottom-left-radius: 5.25rem !important;
 }
 
 .rounded-top-big {
@@ -64,6 +133,12 @@ h5 {
 .rounded-bottom-big-sm {
   border-bottom-right-radius: 1.25rem !important;
   border-bottom-left-radius: 1.25rem !important;
+}
+
+@media only screen and (max-width: 575px) {
+  .rounded-lg-very-big {
+    border-radius: unset !important;
+  }
 }
 
 .border-bottom-dotted {
@@ -118,6 +193,20 @@ h5 {
   background-color: #e6e6e6 !important;
 }
 
+.bg-green-1 {
+  background-color: #1de667;
+}
+
+.bg-primary-3 {
+  background: rgb(160, 155, 241);
+  background: linear-gradient(
+    150deg,
+    rgba(160, 155, 241, 1) 10%,
+    rgba(88, 88, 204, 1) 80%,
+    rgba(0, 136, 164, 1) 10%
+  );
+}
+
 button:focus {
   outline: unset !important;
 }
@@ -141,6 +230,26 @@ a:hover {
 
 .text-success {
   color: #1de693 !important;
+}
+
+.btn-link {
+  color: #1de693 !important;
+}
+
+.btn-link:focus {
+  box-shadow: unset !important;
+  opacity: 0.7;
+}
+
+.btn-danger-2 {
+  color: #fff;
+  background-color: rgb(231, 100, 100);
+  border-color: rgb(231, 100, 100);
+}
+
+.btn-danger-2:hover {
+  color: #fff;
+  opacity: 0.8;
 }
 
 .btn-success {

@@ -30,9 +30,9 @@ const ReferralSection = () => {
           <div className='row mb-5 flex-column-reverse flex-md-row'>
             <div className='col col-md-7'>
               <div className='d-flex justify-content-between align-items-center mb-3'>
-                <h5 className='letter-spacing mb-0 text-muted'>
+                <h6 className='letter-spacing mb-0 text-muted'>
                   Referral Link
-                </h5>
+                </h6>
                 <Button
                   variant='outline-success'
                   className='py-0 px-4 rounded-pill text-uppercase'
@@ -72,9 +72,9 @@ const ReferralSection = () => {
             </div>
             <div className='col col-md-7'>
               <div className='d-flex justify-content-between align-items-center mb-3'>
-                <h5 className='letter-spacing mb-0 text-muted'>
+                <h6 className='letter-spacing mb-0 text-muted'>
                   Your Dividends
-                </h5>
+                </h6>
                 <Button
                   variant='outline-success'
                   className='py-0 px-4 rounded-pill text-uppercase'
