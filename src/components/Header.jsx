@@ -38,19 +38,11 @@ const Header = ({ onClickToggle }) => {
           </Col>
           <Col className='d-flex justify-content-end justify-content-xl-start'>
             <Nav className='small d-none d-md-flex align-items-center'>
-              <Nav.Link as={Link} to='/' className='active'>
-                Home
-              </Nav.Link>
-              <Nav.Link as={Link} to='/'>
-                About us
-              </Nav.Link>
-              <Nav.Link as={Link} to='/'>
-                The Farms
-              </Nav.Link>
-              <Nav.Link as={Link} to='/'>
-                Buy Tokex
-              </Nav.Link>
-              <Nav.Link as={Link} to='/' className='d-flex align-items-center'>
+              <Nav.Link href='#section1'>Home</Nav.Link>
+              <Nav.Link href='#section4'>About us</Nav.Link>
+              <Nav.Link href='#section2'>The Farms</Nav.Link>
+              <Nav.Link href='#section3'>Buy Tokex</Nav.Link>
+              <Nav.Link href='/' className='d-flex align-items-center'>
                 <span>Telegram</span>
                 <span className='h3 text-info ml-2'>
                   <FaTelegram />

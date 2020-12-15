@@ -81,6 +81,7 @@ const PoolArr = [
 // ===
 const RoadMapArr = [
   {
+    link: '/chestGame',
     title: 'Tokex lucky chests',
     image: <img height={200} src={BoxOne} alt='BoxOne' />,
   },
@@ -100,7 +101,7 @@ const RoadMapArr = [
 
 const Home = () => {
   return (
-    <main className='bg-light-2 py-5 mt-5'>
+    <main className='bg-light-2 py-5 mt-5' id='section1'>
       {/* Section-1 */}
       <section className='d-flex flex-column align-items-center mt-5 h-100'>
         <Container className='my-auto'>
@@ -118,7 +119,6 @@ const Home = () => {
                   <Col xs={6} md={3} lg={6}>
                     <Button
                       as={Link}
-                      to='/chestGame'
                       className='rounded-pill py-2'
                       variant='success'
                       block
@@ -180,7 +180,7 @@ const Home = () => {
         </div>
       </section>
       {/* Section-2 */}
-      <section className='bg-light py-5'>
+      <section className='bg-light py-5' id='section2'>
         <Container fluid className='py-5 px-lg-5'>
           {PoolArr.map((PoolArr) => (
             <Row className='mb-3'>
@@ -330,7 +330,7 @@ const Home = () => {
         </Container>
       </section>
       {/* Section-3 */}
-      <section className='bg-light-2 py-5'>
+      <section className='bg-light-2 py-5' id='section3'>
         <Container>
           <div className='text-center my-5 pb-lg-5'>
             <h2 className='text-success mt-3 font-weight-bold'>
@@ -348,7 +348,10 @@ const Home = () => {
           <Row>
             {RoadMapArr.map((RoadMapArr) => (
               <Col className='mb-5 mb-md-0'>
-                <div className='d-flex flex-column align-items-center'>
+                <Link
+                  to={RoadMapArr.link}
+                  className='d-flex flex-column align-items-center'
+                >
                   <h5 className='text-muted text-capitalize'>
                     {RoadMapArr.title}
                   </h5>
@@ -356,14 +359,14 @@ const Home = () => {
                   <span className='text-black-50 letter-spacing'>
                     {RoadMapArr.subTitle}
                   </span>
-                </div>
+                </Link>
               </Col>
             ))}
           </Row>
         </Container>
       </section>
       {/* Section-4 */}
-      <section className='bg-light-2 py-5'>
+      <section className='bg-light-2 py-5' id='section4'>
         <Container>
           <div className='text-center my-5 pb-lg-5'>
             <h2 className='text-success mt-3 font-weight-bold letter-spacing'>

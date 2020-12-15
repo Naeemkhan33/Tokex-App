@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './sideBar.style.css';
 
 const navArr = [
-  { name: 'Home', link: '/' },
-  { name: 'About us', link: '/' },
-  { name: 'The Farms', link: '/' },
-  { name: 'Buy Tokex', link: '/' },
+  { name: 'Home', link: '#section1' },
+  { name: 'About us', link: '#section4' },
+  { name: 'The Farms', link: '#section2' },
+  { name: 'Buy Tokex', link: '#section3' },
   { name: 'Telegram', link: '/' },
 ];
 
@@ -18,12 +17,12 @@ const SideBar = ({ className }) => {
           <ul className='nav pt-5'>
             {navArr.map((navArr) => (
               <li className='nav-item w-100 position-relative'>
-                <Link
-                  to={navArr.link}
+                <a
+                  href={navArr.link}
                   className={`nav-link ${navArr.active} text-center py-3 d-flex flex-column align-items-center justify-content-center`}
                 >
                   <div>{navArr.name}</div>
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
