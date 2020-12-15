@@ -12,8 +12,7 @@ const ReferralSection = () => {
 
   return (
     <section className='p-3 p-md-5 h-100 overflow-auto bg-white'>
-      <Row className='h-100'>
-        <div className='col-12 my-4'>
+        <div className=' my-4'>
           <h2 className='text-success mt-3 font-weight-bold'>
             Referral section
           </h2>
@@ -21,6 +20,7 @@ const ReferralSection = () => {
             <small className='letter-spacing'>Grow your dividends</small>
           </p>
         </div>
+      <Row className='custom-height'>
         <Col className='align-self-end'>
           <div>
             <img height='100%' width='100%' src={PhotoTwo} alt='pic' />

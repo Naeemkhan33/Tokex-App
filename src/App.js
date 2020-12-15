@@ -21,9 +21,9 @@ function App({location}) {
     <div className="App vh-100 bg-light pt-5">
      <Header onClickToggle={() => setShow(!show)}/>
       <Switch>
-        <Row className='mx-0'>
+        <Row className='mx-0 main-height'>
         <SideBar className={show ? 'sidebar-c border shadow-sm' : 'w-0'}/>
-         <Col className='px-0'>
+         <Col className='px-0 h-100'>
          <Route exact path='/' component={Home} />
         <Route exact path='/chestGame' component={ChestGame}  />
         <Route exact path='/referralSection' component={ReferralSection}  />
